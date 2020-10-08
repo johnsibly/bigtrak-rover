@@ -5,7 +5,7 @@ Tools to talk to the Bigtrak Rover
 ## Requirements
 
 * Mac/PC/Pi etc
-* iPhone 5 / 5c / 5s
+* iPhone 5 / 5c / 5s / SE
 * Bigtrak Rover
 
 ## Setup
@@ -20,6 +20,7 @@ Tools to talk to the Bigtrak Rover
 * Set full brightness
 * Open Safari, go to `http://<computer_local_ip>:3000` click 'Add to Home Screen' (to enable fullscreen safari)
 * Open the new bookmark from the homescreen icon.
+* Ensure the page is fully zoomed out
 
 ## Usage
 

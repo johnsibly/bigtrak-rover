@@ -3,7 +3,7 @@ var app = require('express')(),
   io = require('socket.io')(http);
 
 app.get('/', function(req, res){
-  res.sendfile('phone.html');
+  res.sendFile(__dirname + '/phone.html');
 });
 
 io.on('connection', function(socket){
@@ -11,11 +11,16 @@ io.on('connection', function(socket){
   console.log('a client connected');
 
   socket.on('move', function (msg) {
-    socket.broadcast.emit('move', msg);
+    console.log('move on server' + msg);
+    // socket.broadcast.emit('move', msg);
+    // socket.emit('move', msg);
+    io.emit('move', msg);
   });
 
   socket.on('stop', function () {
-    socket.broadcast.emit('stop');
+    // socket.broadcast.emit('stop');
+    // socket.emit('stop');
+    io.emit('stop');
   });
 });
 

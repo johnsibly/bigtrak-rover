@@ -11,7 +11,6 @@ io.on('connection', function(socket){
   console.log('a client connected');
 
   socket.on('move', function (msg) {
-    console.log('move on server' + msg.keyCode);
     socket.broadcast.emit('move', msg);
   });
 
@@ -20,6 +19,6 @@ io.on('connection', function(socket){
   });
 });
 
-http.listen(3000, '0.0.0.0', function(){
+http.listen(3000, function(){
   console.log('listening on *:3000');
 });
